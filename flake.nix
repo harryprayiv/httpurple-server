@@ -24,8 +24,11 @@
                   [ 
                     console
                     effect
+                    prelude
                     httpurple
                     psci-support
+                    aff
+                    datetime
                   ];
 
                 dir = ./.;
@@ -70,6 +73,7 @@
                     purs-watch
                     vite
                     dev
+                    httpie
                   ];
               };
         }
