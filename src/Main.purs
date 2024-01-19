@@ -26,7 +26,7 @@ main :: Effect Unit
 main = do
   shutdown <- HTTP.serve { hostname: "localhost", port: 3000, onStarted } { route, router: const $ HTTP.ok "Go Away!" }
   launchAff_ $ do
-    delay (Milliseconds 2000.0) 
+    delay (Milliseconds 5000.0) 
     liftEffect $ log "Shutting down server..."
     liftEffect $ shutdown $ log "Server shutdown"
   where
